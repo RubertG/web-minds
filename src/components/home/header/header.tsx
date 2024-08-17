@@ -13,7 +13,7 @@ export const Header = ({
       <div id="sobre-nosotros" />
       <Decoration />
       <header
-        className={`min-h-screen gap-8 mt-32 md:mt-0 md:grid md:grid-cols-2 md:justify-center md:items-center md:gap-5 ${className}`}
+        className={`min-h-screen mt-32 md:mt-0 md:grid md:grid-cols-2 md:justify-center md:items-center md:gap-5 ${className}`}
       >
         <section>
           <div>
