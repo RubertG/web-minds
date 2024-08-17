@@ -16,23 +16,25 @@ export const Header = ({
         className={`min-h-screen gap-8 mt-32 md:mt-0 md:grid md:grid-cols-2 md:justify-center md:items-center md:gap-5 ${className}`}
       >
         <section>
-          <h1 className={`${bebasNeue.className} text-7xl text-principal font-bold flex flex-col md:text-8xl`}>
-            WebMinds
-            <span className={`${poppins.className} text-text-100 text-3xl font-bold -mt-2 md:text-5xl`}>
+          <div>
+            <h1 className={`${bebasNeue.className} text-7xl text-principal font-bold flex flex-col md:text-8xl fade-in`}>
+              WebMinds
+            </h1>
+            <h2 className={`${poppins.className} text-text-100 text-3xl font-bold -mt-2 md:text-5xl fade-in`} style={{ animationDelay: "0.2s" }}>
               Colombia
-            </span>
-          </h1>
-          <p className="text-text-200 text-sm mt-2 md:text-base">
+            </h2>
+          </div>
+          <p className="text-text-200 text-sm mt-2 md:text-base fade-in" style={{ animationDelay: "0.4s" }}>
             Somos una empresa de desarrollo digital especializada en la creación de soluciones web y aplicaciones personalizadas para empresas y emprendedores.
           </p>
         </section>
-        <div className="mt-8 md:mt-0 flex justify-end">
+        <div className="mt-8 md:mt-0 flex justify-endc fade-in" style={{ animationDelay: "0.6s" }}>
           <Image
             className="max-w-[600px] w-full select-none"
             src="/sobre-nosotros.svg"
             alt="Sobre nosotros"
-            width={700}
-            height={548}
+            width={600}
+            height={420}
           />
         </div>
       </header>
