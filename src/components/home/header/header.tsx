@@ -18,7 +18,7 @@ export const Header = ({
         <section>
           <h1 className={`${bebasNeue.className} text-7xl text-principal font-bold flex flex-col md:text-8xl`}>
             WebMinds
-            <span className={`${poppins.className} text-text-200 text-3xl font-bold -mt-2 md:text-5xl`}>
+            <span className={`${poppins.className} text-text-100 text-3xl font-bold -mt-2 md:text-5xl`}>
               Colombia
             </span>
           </h1>
