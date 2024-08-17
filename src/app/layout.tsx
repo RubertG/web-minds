@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo.svg" />
       </head>
-      <body className={`${poppins.className} bg-bg-100 antialiased`}>
+      <body className={`${poppins.className} bg-bg-100 antialiased overflow-x-hidden max-w-screen`}>
         <Nav />
         {children}
       </body>
