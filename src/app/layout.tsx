@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { baseUrl } from "@/utils/common/base-url"
 import { poppins } from "@/fonts/poppins.font"
+import { Nav } from "@/components/common/nav/nav"
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -33,7 +34,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo.svg" />
       </head>
-      <body className={poppins.className}>{children}</body>
+      <body className={`${poppins.className} bg-bg-100 antialiased`}>
+        <Nav />
+        {children}
+      </body>
     </html>
   )
 }
