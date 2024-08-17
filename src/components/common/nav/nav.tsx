@@ -30,7 +30,7 @@ export function Nav() {
       className="fixed w-full top-0 left-0 z-30 lg:mt-2.5"
     >
       <nav
-        className="flex items-center justify-between max-w-7xl bg-nav/40 lg:backdrop-blur-sm lg:rounded-xl px-4 py-2.5 mx-auto">
+        className="flex items-center justify-between max-w-7xl bg-nav/80 lg:bg-nav/40 lg:backdrop-blur-sm lg:rounded-xl px-4 py-2.5 mx-auto">
         <Link
           className="flex items-center gap-2"
           href="/"
@@ -42,7 +42,7 @@ export function Nav() {
           </h1>
         </Link>
         <ul
-          className={clsx("text-text-100 text-center bg-nav/40 lg:bg-inherit absolute w-full top-14 left-0 lg:static lg:w-auto lg:flex lg:items-center lg:justify-center gap-1 lg:gap-6", {
+          className={clsx("text-text-100 text-center bg-nav/80 lg:bg-inherit absolute w-full top-[60px] left-0 lg:static lg:w-auto lg:flex lg:items-center lg:justify-center gap-1 lg:gap-6", {
             "hidden": !open
           })}
           onClick={() => setOpen(false)}
