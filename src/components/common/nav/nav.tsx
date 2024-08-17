@@ -57,6 +57,7 @@ export function Nav() {
         </ul>
         <button
           className="flex justify-between items-center gap-[3px] flex-col lg:hidden"
+          title="Abrir menú"
           onClick={() => setOpen(!open)}
         >
           <span className={clsx("h-[2px] w-5 bg-gray-200 rounded-lg transition-transform", {
