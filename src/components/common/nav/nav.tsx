@@ -42,7 +42,7 @@ export function Nav() {
           </h1>
         </Link>
         <ul
-          className={clsx("text-text-100 text-center bg-nav/80 lg:bg-transparent absolute w-full top-[60px] left-0 lg:static lg:w-auto lg:flex lg:items-center lg:justify-center gap-1 lg:gap-6", {
+          className={clsx("text-text-100 text-center bg-nav/80 lg:bg-transparent absolute w-full top-[60px] left-0 lg:static lg:w-auto lg:flex lg:items-center lg:justify-center gap-1 lg:gap-6 fade-in-nav", {
             "hidden": !open
           })}
           onClick={() => setOpen(false)}
