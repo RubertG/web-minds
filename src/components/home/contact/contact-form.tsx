@@ -70,12 +70,15 @@ export const ContactForm = ({
 
       <footer className="flex items-center justify-start mt-3 gap-3 lg:gap-4">
         <button
-          className="text-text-100 bg-principal px-5 py-2.5 rounded-lg transition-colors lg:hover:bg-principal/85 lg:text-base"
+          title="Hacer cotización por Whatsapp"
+          className="text-text-100 bg-principal px-5 py-2.5 rounded-lg transition-colors lg:hover:bg-principal/85 lg:text-base w-full"
         >
           Hacer cotización
         </button>
         <Link
           className="lg:hover:scale-110 lg:transition-transform"
+          target="_blank"
+          title="Visitar nuestro Instagram"
           href="https://www.instagram.com/webminds.col/"
         >
           <Image
