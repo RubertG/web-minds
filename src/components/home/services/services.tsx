@@ -17,9 +17,9 @@ export const Services = ({
 }) => {
   return (
     <main
-      id="servicios"
       className={`min-h-screen relative ${className}`}
     >
+      <div className="absolute -top-16" id="servicios"/>
       <Decoration />
       <h2
         className={`${bebasNeue.className} text-5xl text-text-100 font-bold text-center`}
@@ -27,7 +27,7 @@ export const Services = ({
       <section className="mt-10 md:grid md:grid-cols-[auto_55%] md:justify-center md:items-center md:gap-24">
         <div className="relative select-none">
           <Image
-            className="absolute -translate-y-[50%] top-1/2 left-1/2 -translate-x-1/2 -z-20 min-w-[600px] opacity-90"
+            className="absolute -translate-y-[50%] top-1/2 left-1/2 -translate-x-1/2 -z-20 min-w-[600px] opacity-70"
             src="/decoration.svg"
             alt="Decoración"
             width={600}
