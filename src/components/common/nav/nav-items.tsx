@@ -48,16 +48,7 @@ export const NavItems = ({
           )
         }
       </AnimatePresence>
-      <motion.ul
-        className="text-text-100 text-center hidden lg:bg-transparentlg:w-auto lg:flex lg:items-center lg:justify-center lg:gap-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 0.25
-        }}
-        exit={{ opacity: 0 }}
-        onClick={() => setOpen(false)}
-      >
+      <ul className="text-text-100 text-center hidden lg:bg-transparentlg:w-auto lg:flex lg:items-center lg:justify-center lg:gap-6">
         {
           links.map((link) => (
             <li key={link.name}>
@@ -65,7 +56,7 @@ export const NavItems = ({
             </li>
           ))
         }
-      </motion.ul>
+      </ul>
     </>
   )
 }
