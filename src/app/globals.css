@@ -18,6 +18,11 @@ html {
 	animation: fade-in-opacity 1s ease-in-out both;
 }
 
+textarea {
+  resize: none;
+  field-sizing: content;
+}
+
 @keyframes fade-in-nav {
 	0% {
 		opacity: 0;

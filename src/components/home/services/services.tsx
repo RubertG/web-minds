@@ -18,7 +18,7 @@ export const Services = ({
   return (
     <main
       id="servicios"
-      className={`min-h-screen relative md:py-10 ${className}`}
+      className={`min-h-screen relative ${className}`}
     >
       <Decoration />
       <h2
