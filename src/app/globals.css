@@ -3,46 +3,46 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 .fade-in-nav {
-  animation: fade-in-nav 0.2s ease-in-out both;
+	animation: fade-in-nav 0.2s ease-in-out both;
 }
 
 .fade-in {
-  animation: fade-in 0.3s ease-in-out both;
+	animation: fade-in 0.3s ease-in-out both;
 }
 
 .fade-in-opacity {
-  animation: fade-in-opacity 1s ease-in-out both;
+	animation: fade-in-opacity 1s ease-in-out both;
 }
 
 @keyframes fade-in-nav {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes fade-in-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes fade-in {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }

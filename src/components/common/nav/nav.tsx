@@ -3,9 +3,9 @@
 import clsx from "clsx"
 import Link from "next/link"
 import { useState } from "react"
-import { NavItem } from "./nav-item"
 import { bebasNeue } from "@/fonts/bebas-neue.font"
 import Image from "next/image"
+import { NavItems } from "./nav-items"
 
 const links = [
   {
@@ -41,20 +41,11 @@ export function Nav() {
             WebMinds
           </h1>
         </Link>
-        <ul
-          className={clsx("text-text-100 text-center bg-nav/80 lg:bg-transparent absolute w-full top-[60px] left-0 lg:static lg:w-auto lg:flex lg:items-center lg:justify-center gap-1 lg:gap-6 fade-in-nav", {
-            "hidden": !open
-          })}
-          onClick={() => setOpen(false)}
-        >
-          {
-            links.map((link) => (
-              <li key={link.name}>
-                <NavItem item={link} />
-              </li>
-            ))
-          }
-        </ul>
+        <NavItems 
+          links={links}
+          open={open}
+          setOpen={setOpen}
+        />
         <button
           className="flex justify-between items-center gap-[3px] flex-col lg:hidden"
           title="Abrir menú"

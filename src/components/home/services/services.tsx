@@ -6,7 +6,7 @@ import { ServiceItem } from "./service-item"
 const services = [
   "Páginas web", "Diseño web", "Panel administrativo", "Tienda virtual",
   "Blogs", "Aplicaciones web", "landing pages", "Catálogos virtuales",
-  "Páginas linktree", "Dominio web", "Certificado SSL", "Hosting",
+  "Páginas Linktree", "Dominio web", "Certificado SSL", "Hosting",
   "Correos corporativos"
 ]
 
