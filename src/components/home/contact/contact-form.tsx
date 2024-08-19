@@ -1,79 +1,103 @@
+"use client"
+
+import { useForm } from "@/hooks/common/use-form"
+import { contactSchema } from "@/schemas/home/contact/contact.schema"
 import Image from "next/image"
 import Link from "next/link"
+import { FormError } from "./form-error"
+import clsx from "clsx"
+import { Input, Textarea } from "./input"
+
+interface Inputs {
+  name: string
+  email: string
+  number: string
+  message?: string
+}
 
 export const ContactForm = ({
   className
 }: {
   className?: string
 }) => {
+  const { errors, handleSubmit, loading, register } = useForm<Inputs>({
+    schema: contactSchema,
+    actionSubmit: async (inputs) => {
+      const message = `
+        ¡Hola WebMinds!
+        %0ASoy ${inputs.name} y quiero más información sobre tus servicios. 
+        %0A
+        %0AMi correo: ${inputs.email} 
+        %0AMi número de telefono: ${inputs.number}
+        %0A${inputs.message && `Mi web va dirigida para: ${inputs.message}`}
+      `
+
+      if (!window) return
+
+      window.open(`https://wa.me/57${process.env.NEXT_PUBLIC_PHONE}?text=${message}`, '_blank')
+    }
+  })
+
   return (
     <form
+      onSubmit={handleSubmit}
       className={`bg-bg-card/10 backdrop-blur-sm text-text-100 px-5 py-2.5 rounded-lg border border-bg-300 ${className}`}
     >
-      <label
-        className="block"
-        htmlFor="name"
-      >
-        Nombre y apellido
-      </label>
-      <input
-        className="lg:text-base w-full mt-2 text-text-200 bg-transparent px-5 py-2.5 rounded-lg border border-bg-300 focus:border-principal focus:outline-none transition-colors text-sm"
+      <Input
+        label="Nombre y apellido"
+        className={clsx("", {
+          "!border-red-700": errors.name?.message
+        })}
         type="text"
-        name="name"
         id="name"
         placeholder="Pepito Perez..."
+        {...register("name")}
       />
+      {errors.name?.message && <FormError>{errors.name?.message}</FormError>}
 
-      <label
-        className="block mt-4"
-        htmlFor="email"
-      >
-        Correo electrónico
-      </label>
-      <input
-        className="lg:text-base w-full mt-2 text-text-200 bg-transparent px-5 py-2.5 rounded-lg border border-bg-300 focus:border-principal focus:outline-none transition-colors text-sm"
+      <Input
+        label="Correo electrónico"
+        classNameLabel="mt-4"
+        className={clsx("", {
+          "!border-red-700": errors.email?.message
+        })}
         type="email"
-        name="email"
         id="email"
         placeholder="tucorreo@ejemplo.com"
+        {...register("email")}
       />
+      {errors.email?.message && <FormError>{errors.email?.message}</FormError>}
 
-      <label
-        className="block mt-4"
-        htmlFor="phone"
-      >
-        Número telefónico
-      </label>
-      <input
-        className="lg:text-base w-full mt-2 text-text-200 bg-transparent px-5 py-2.5 rounded-lg border border-bg-300 focus:border-principal focus:outline-none transition-colors text-sm appearance-none"
+      <Input
+        label="Número telefónico"
+        classNameLabel="mt-4"
+        className={clsx("appearance-none", {
+          "!border-red-700": errors.number?.message
+        })}
         type="text"
-        name="phone"
         id="phone"
-        pattern="[0-9]{10}"
-        minLength={10}
-        maxLength={10}
         placeholder="0000000000"
+        {...register("number")}
       />
+      {errors.number?.message && <FormError>{errors.number?.message}</FormError>}
 
-      <label
-        className="block mt-4"
-        htmlFor="email"
-      >
-        ¿Para qué va dirigida tu web?
-      </label>
-      <textarea
-        className="lg:text-base w-full mt-2 text-text-200 bg-transparent px-5 py-2.5 rounded-lg border border-bg-300 focus:border-principal focus:outline-none transition-colors text-sm appearance-none"
-        name="email"
-        id="email"
+      <Textarea
+        label="¿Para qué va dirigida tu web?"
+        classNameLabel="mt-4"
+        className="appearance-none"
+        id="message"
         placeholder="Descripción del negocio al cual le quieres crear la web..."
+        optional
+        {...register("message")}
       />
+      {errors.message?.message && <FormError>{errors.message?.message}</FormError>}
 
       <footer className="flex items-center justify-start mt-3 gap-3 lg:gap-4">
         <button
           title="Hacer cotización por Whatsapp"
           className="text-text-100 bg-principal px-5 py-2.5 rounded-lg transition-colors lg:hover:bg-principal/85 lg:text-base w-full"
         >
-          Hacer cotización
+          {loading ? "Haciendo cotización..." : "Hacer cotización"}
         </button>
         <Link
           className="lg:hover:scale-110 lg:transition-transform"
