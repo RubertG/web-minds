@@ -7,11 +7,11 @@ import { Nav } from "@/components/common/nav/nav"
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: "WebMinds Colombia - Creador de soluciones web",
-  description: "WebMinds es una empresa de desarrollo digital especializada en la creación de soluciones web y aplicaciones personalizadas para empresas y emprendedores.",
+  description: "WebMinds Colombia es una empresa de desarrollo digital especializada en la creación de soluciones web y aplicaciones personalizadas para empresas y emprendedores.",
   keywords: "webminds, colombia, creador de sitios web, desarrollo web, desarrollo",
   openGraph: {
     title: "WebMinds Colombia - Creador de soluciones web",
-    description: "WebMinds es una empresa de desarrollo digital especializada en la creación de soluciones web y aplicaciones personalizadas para empresas y emprendedor.",
+    description: "WebMinds Colombia es una empresa de desarrollo digital especializada en la creación de soluciones web y aplicaciones personalizadas para empresas y emprendedor.",
     url: new URL("/", baseUrl),
     siteName: "WebMinds Colombia",
     images: [
