@@ -10,15 +10,15 @@ import { NavItems } from "./nav-items"
 const links = [
   {
     name: "Sobre nosotros",
-    href: "/#sobre-nosotros"
+    href: "#sobre-nosotros"
   },
   {
     name: "Servicios",
-    href: "/#servicios"
+    href: "#servicios"
   },
   {
     name: "Contáctanos",
-    href: "/#contacto"
+    href: "#contacto"
   }
 ]
 
